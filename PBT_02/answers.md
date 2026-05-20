@@ -196,3 +196,32 @@ Câu A5:
         <input type="submit" value="Gửi">
 
     </form>
+Câu C2:
+1. Pattern regex cho CMND/CCCD và Số tài khoản;
+    +CMND/CCCD — đúng 12 chữ số:pattern="^\d{12}$"
+    +Số tài khoản — từ 10 đến 15 chữ số:pattern="^\d{10,15}$"
+2. HTML5 validation đã đủ an toàn cho ứng dụng ngân hàng chưa?
+    +Chưa đủ an toàn
+    -HTML5 validation chỉ là validation phía Frontend (client-side), mục đích chính:
+    +cải thiện trải nghiệm người dùng
+    +kiểm tra nhanh dữ liệu nhập
+    -Người dùng hoặc hacker có thể:
+    +tắt JavaScript
+    +sửa HTML bằng DevTools
+    +gửi request trực tiếp bằng Postman/API
+    +bypass hoàn toàn validation HTML5
+3. Ba loại validation HTML5 KHÔNG thể làm tốt (phải dùng JavaScript)
+    1.So sánh nhiều field với nhau
+    2.Kiểm tra dữ liệu realtime/phức tạp
+    3.Validation theo logic nghiệp vụ
+4. Hai rủi ro bảo mật nếu chỉ validate Frontend mà không validate Backend
+    1.Bypass validation và gửi dữ liệu độc hại
+    -Hacker có thể:
+    +sửa request
+    +bỏ pattern
+    +gửi dữ liệu sai định dạng
+    2.SQL Injection / dữ liệu giả mạo
+    _Nếu Backend không kiểm tra lại:
+    +hacker có thể gửi lệnh SQL độc hại
+    +thay đổi dữ liệu tài khoản
+    +truy cập trái phép
