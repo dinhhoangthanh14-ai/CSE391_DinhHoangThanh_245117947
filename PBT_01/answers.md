@@ -55,3 +55,24 @@ Câu A3:
       → Đều là inline nên hiển thị cùng dòng
     5.Hộp 3
       → Là block nên hiển thị dòng riêng
+Câu A4:
+    1. Sự khác nhau giữa thead, tbody, tfoot:
+    + thead
+    -Chứa hàng tiêu đề của bảng
+    -Thường dùng  (table header) bên trong
+    -Giúp mô tả ý nghĩa các cột
+
+    + <tbody> (Table Body – phần thân bảng)
+    -Chứa dữ liệu chính của bảng
+    -Gồm nhiều hàng <tr> và ô <td>
+    -Đây là phần hiển thị nội dung quan trọng nhất
+
+    + <tfoot> (Table Foot – phần cuối bảng)
+    -Chứa thông tin tổng kết / ghi chú
+
+    2.Không nên dùng table để tạo layout web vì:
+    +Không đúng ngữ nghĩa (semantic)
+    +Khó bảo trì và chỉnh sửa
+    +Không responsive (khó hiển thị trên mobile)
+    +Hiệu năng kém
+    
