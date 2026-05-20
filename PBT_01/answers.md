@@ -191,4 +191,13 @@ Câu B3
     Ví dụ:
     ```html
     action="/search"
-        
+Câu C2
+    Semantic HTML không chỉ là “học thêm vài thẻ mới”, mà còn giúp website hoạt động tốt hơn về mặt kỹ thuật. Nếu dùng <div> cho mọi thứ thì trình duyệt, công cụ tìm kiếm và các thiết bị hỗ trợ người khuyết tật sẽ khó hiểu cấu trúc thực sự của trang web.
+
+    Lý do đầu tiên là SEO. Các công cụ tìm kiếm như Google ưu tiên những trang có cấu trúc rõ ràng. Khi sử dụng các thẻ như <header>, <nav>, <main>, <article> hay <footer>, bot tìm kiếm sẽ dễ xác định đâu là nội dung chính, đâu là menu điều hướng hoặc bài viết. Điều này giúp website được index chính xác hơn và cải thiện thứ hạng tìm kiếm. Nếu tất cả đều là <div>, bot phải đoán cấu trúc thông qua class hoặc CSS, kém hiệu quả hơn.
+
+    Lý do thứ hai là accessibility. Người dùng sử dụng screen reader sẽ dựa vào semantic HTML để điều hướng trang. Ví dụ, thẻ <nav> giúp họ chuyển nhanh đến menu, còn <main> giúp bỏ qua phần header để đọc nội dung chính. Nếu chỉ dùng <div>, trải nghiệm của người khiếm thị sẽ khó khăn hơn nhiều.
+
+    Ví dụ thực tế: một trang bán hàng dùng <article> cho mỗi sản phẩm sẽ giúp cả SEO lẫn screen reader hiểu rằng mỗi block là một nội dung độc lập. Điều này tốt hơn việc dùng hàng loạt <div class="product">.
+
+    Tuy nhiên, <div> vẫn rất cần thiết trong các trường hợp chỉ phục vụ layout hoặc styling, ví dụ tạo grid sản phẩm, flexbox container hoặc wrapper cho animation. Vì vậy, semantic HTML không thay thế hoàn toàn <div>, mà nên kết hợp cả hai để website vừa đúng cấu trúc vừa dễ phát triển.
