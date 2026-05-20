@@ -44,3 +44,14 @@ Câu A2:
     6. Footer không dùng thẻ semantic
     ->Sửa thành:<div class="footer">© 2026 ShopTLU</div>
     ->Sửa thành:<footer>© 2026 ShopTLU</footer>
+Câu A3:
+    1. Hộp 1
+      → Là block nên hiển thị 1 dòng riêng
+    2.Text A và Text B
+      → Cả hai là inline nên nằm cùng dòng:
+    3.Hộp 2
+      → Lại là block nên xuống dòng riêng
+    4.Text C và Text D
+      → Đều là inline nên hiển thị cùng dòng
+    5.Hộp 3
+      → Là block nên hiển thị dòng riêng
