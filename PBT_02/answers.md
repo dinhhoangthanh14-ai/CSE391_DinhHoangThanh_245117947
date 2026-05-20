@@ -78,4 +78,23 @@ Nó được dùng khi:
 +Ảnh biểu đồ doanh thu Q1/2026
 <img src="chart-q1.png"
      alt="Biểu đồ doanh thu quý 1 năm 2026 tăng từ tháng 1 đến tháng 3">
-     
+Câu A5:
+1. dùng Cách 1 khi:
++ảnh chỉ có chức năng minh họa đơn giản
++không cần chú thích riêng
++ảnh không phải nội dung độc lập quan trọng
+VD:
+<img src="logo.png" alt="Logo ShopTLU">
+1. dùng Cách 2 khi:
++ảnh là nội dung quan trọng
++cần chú thích hoặc mô tả đi kèm
++muốn semantic rõ ràng hơn
+VD:
+<figure>
+    <img src="iphone16.jpg"
+         alt="iPhone 16 Pro Max 256GB Titan">
+    <figcaption>
+        iPhone 16 Pro Max — 25.990.000đ
+    </figcaption>
+</figure>
+
