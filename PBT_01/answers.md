@@ -77,35 +77,118 @@ Câu A4:
     +Hiệu năng kém
 
 Câu B3
-Lỗi 1: Dòng 1 — Khai báo DOCTYPE sai cú pháp (`<!DOCTYPE>`) — Sửa thành `<!DOCTYPE html>`.
+    Lỗi 1: Dòng 1 — Khai báo DOCTYPE sai cú pháp (`<!DOCTYPE>`) — Sửa thành `<!DOCTYPE html>`.
 
-Lỗi 2: Dòng 5 — Thẻ `<title>` chưa đóng — Sửa thành `<title>Trang web</title>`.
+    Lỗi 2: Dòng 5 — Thẻ `<title>` chưa đóng — Sửa thành `<title>Trang web</title>`.
 
-Lỗi 3: Dòng 6 — Charset viết sai (`utf8`) — Sửa thành `UTF-8`.
+    Lỗi 3: Dòng 6 — Charset viết sai (`utf8`) — Sửa thành `UTF-8`.
 
-Lỗi 4: Dòng 10 — Thẻ `<h1>` đóng sai (`<h1>` thay vì `</h1>`) — Thay bằng `</h1>`.
+    Lỗi 4: Dòng 10 — Thẻ `<h1>` đóng sai (`<h1>` thay vì `</h1>`) — Thay bằng `</h1>`.
 
-Lỗi 5: Dòng 14 — Thẻ `<a>` đầu tiên chưa đóng — Sửa thành `</a>`.
+    Lỗi 5: Dòng 14 — Thẻ `<a>` đầu tiên chưa đóng — Sửa thành `</a>`.
 
-Lỗi 6: Dòng 21 — Thuộc tính src của ảnh không có dấu ngoặc kép — Sửa thành `src="iphone.jpg"`.
+    Lỗi 6: Dòng 21 — Thuộc tính src của ảnh không có dấu ngoặc kép — Sửa thành `src="iphone.jpg"`.
 
-Lỗi 7: Dòng 21 — Thẻ `<img>` thiếu thuộc tính `alt` — Thêm `alt="iPhone 16 Pro"`.
+    Lỗi 7: Dòng 21 — Thẻ `<img>` thiếu thuộc tính `alt` — Thêm `alt="iPhone 16 Pro"`.
 
-Lỗi 8: Dòng 23 — Thẻ `<b>` và `<p>` lồng sai thứ tự — Đổi thành `<p>Giá: <b>25.990.000đ</b></p>`.
+    Lỗi 8: Dòng 23 — Thẻ `<b>` và `<p>` lồng sai thứ tự — Đổi thành `<p>Giá: <b>25.990.000đ</b></p>`.
 
-Lỗi 9: Dòng 18 và 27 — Dùng `<h3>` không hợp semantic vì chưa có `<h2>` trước đó — Đổi thành `<h2>`.
+    Lỗi 9: Dòng 18 và 27 — Dùng `<h3>` không hợp semantic vì chưa có `<h2>` trước đó — Đổi thành `<h2>`.
 
-Lỗi 10: Dòng 41 — Sử dụng thêm một thẻ `<main>` thứ hai là sai semantic HTML — Đổi thành `<aside>`.
+    Lỗi 10: Dòng 41 — Sử dụng thêm một thẻ `<main>` thứ hai là sai semantic HTML — Đổi thành `<aside>`.
 
-Lỗi 11: Dòng 46 — Thẻ `<p>` trong footer chưa đóng — Thêm `</p>`.
+    Lỗi 11: Dòng 46 — Thẻ `<p>` trong footer chưa đóng — Thêm `</p>`.
 
-Lỗi 12: Bảng thiếu semantic structure — Thêm `<thead>` và `<tbody>`.
+    Lỗi 12: Bảng thiếu semantic structure — Thêm `<thead>` và `<tbody>`.
 
-Lỗi 13: Dòng 31 và 32 — Dùng `<td>` cho tiêu đề bảng chưa đúng semantic — Đổi thành `<th>`.
+    Lỗi 13: Dòng 31 và 32 — Dùng `<td>` cho tiêu đề bảng chưa đúng semantic — Đổi thành `<th>`.
 
-Lỗi 14: Thẻ `<html>` thiếu thuộc tính ngôn ngữ — Thêm `lang="vi"`.
+    Lỗi 14: Thẻ `<html>` thiếu thuộc tính ngôn ngữ — Thêm `lang="vi"`.
 
-Lỗi 15: Thiếu thẻ meta viewport để responsive — Thêm:
-`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+    Lỗi 15: Thiếu thẻ meta viewport để responsive — Thêm:
+    `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
-    
+ BÀI B4 — PHÂN TÍCH TRANG WEB SHOPEE.VN
+
+    ## Website được chọn
+    https://shopee.vn
+
+1. Phân tích semantic HTML5
+
+     Screenshot
+    Xem file:
+    - screenshots/elements-semantic.png
+
+     3 thẻ semantic HTML5 được sử dụng
+
+     Thẻ 1: <header>
+    - Vị trí: Phần đầu trang web Shopee
+    - Chức năng:
+    Chứa logo, thanh tìm kiếm, menu điều hướng.
+
+     Thẻ 2: <nav>
+    - Vị trí: Thanh menu điều hướng phía trên.
+    - Chức năng:
+    Điều hướng đến các danh mục sản phẩm.
+
+     Thẻ 3: <main>
+    - Vị trí: Khu vực nội dung chính của trang.
+    - Chức năng:
+    Hiển thị banner, sản phẩm và nội dung chính.
+
+    ---
+
+2. Các thẻ dùng chưa đúng semantic
+
+     Lỗi semantic 1
+    - Shopee sử dụng quá nhiều thẻ <div> thay cho:
+    - <section>
+    - <article>
+    - <aside>
+
+    => Làm giảm tính semantic của HTML.
+
+     Lỗi semantic 2
+    - Một số nút chức năng được tạo bằng:
+    <div> hoặc <span>
+    thay vì dùng:
+    <button>
+
+    => Không tối ưu accessibility.
+
+    ---
+
+3. Phân tích table
+
+     Screenshot
+    Xem file:
+    - screenshots/table.png
+
+     Nội dung table
+    Table hiển thị:
+    - Danh sách sản phẩm
+    hoặc
+    - Thông tin đơn hàng / giá / số lượng.
+
+     Có sử dụng thead và tbody không?
+    - Có sử dụng:
+    - <thead>
+    - <tbody>
+
+    => Giúp phân chia rõ phần tiêu đề và dữ liệu bảng.
+
+    ---
+
+4. Phân tích form tìm kiếm
+
+     Screenshot
+    Xem file:
+    - screenshots/form-search.png
+
+     Form đó có action và method gì?
+
+     action
+    Ví dụ:
+    ```html
+    action="/search"
+        
