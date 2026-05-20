@@ -79,22 +79,120 @@ Nó được dùng khi:
 <img src="chart-q1.png"
      alt="Biểu đồ doanh thu quý 1 năm 2026 tăng từ tháng 1 đến tháng 3">
 Câu A5:
-1. dùng Cách 1 khi:
-+ảnh chỉ có chức năng minh họa đơn giản
-+không cần chú thích riêng
-+ảnh không phải nội dung độc lập quan trọng
-VD:
-<img src="logo.png" alt="Logo ShopTLU">
-1. dùng Cách 2 khi:
-+ảnh là nội dung quan trọng
-+cần chú thích hoặc mô tả đi kèm
-+muốn semantic rõ ràng hơn
-VD:
-<figure>
-    <img src="iphone16.jpg"
-         alt="iPhone 16 Pro Max 256GB Titan">
-    <figcaption>
-        iPhone 16 Pro Max — 25.990.000đ
-    </figcaption>
-</figure>
+    1. dùng Cách 1 khi:
+    +ảnh chỉ có chức năng minh họa đơn giản
+    +không cần chú thích riêng
+    +ảnh không phải nội dung độc lập quan trọng
+    VD:
+    <img src="logo.png" alt="Logo ShopTLU">
+    1. dùng Cách 2 khi:
+    +ảnh là nội dung quan trọng
+    +cần chú thích hoặc mô tả đi kèm
+    +muốn semantic rõ ràng hơn
+    VD:
+    <figure>
+        <img src="iphone16.jpg"
+            alt="iPhone 16 Pro Max 256GB Titan">
+        <figcaption>
+            iPhone 16 Pro Max — 25.990.000đ
+        </figcaption>
+    </figure>
+    Câu C1:
+1. Lỗi 1: Dòng 2 — Input "Tên" không có <label for="">, vi phạm accessibility
+    +Sửa:
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name" required>
 
+2. Lỗi 2: Dòng 2 — Input "Tên" thiếu thuộc tính name
+    Nếu không có name, dữ liệu sẽ không được gửi khi submit form.
+    +Sửa:
+    <input type="text" id="name" name="name">
+
+3. Lỗi 3: Dòng 4 — Input email không có <label>
+    Placeholder không thay thế cho label vì screen reader hoạt động kém với placeholder.
+    +Sửa:
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+
+4. Lỗi 4: Dòng 6 — Password không có <label>
+    +Sửa:
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required>
+
+5. Lỗi 5: Dòng 7 — Ô nhập lại mật khẩu không có label và không phân biệt rõ với password chính
+    +Sửa:
+    <label for="confirm-password">Nhập lại mật khẩu:</label>
+    <input type="password" id="confirm-password" name="confirm_password" required>
+
+6. Lỗi 6: Dòng 9 — Input số điện thoại dùng type="text" chưa phù hợp
+    Nên dùng:
+    type="tel"
+    để hỗ trợ validation và mobile keyboard.
+    +Sửa:
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" value="0901234567">
+
+7. Lỗi 7: Dòng 11 — <select> không có label
+    Sửa:
+    <label for="city">Thành phố:</label>
+    <select id="city" name="city">
+        <option>Hà Nội</option>
+        <option>TP.HCM</option>
+    </select>
+
+8. Lỗi 8: Dòng 16 — Checkbox điều khoản bị thiếu input checkbox
+    Hiện tại chỉ có text trong <label> nhưng không có ô tick.
+    +Sửa:
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">
+        Tôi đồng ý điều khoản
+    </label>
+    Form hoàn chỉnh sau khi sửa
+    <form>
+
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email"
+            id="email"
+            name="email"
+            placeholder="Email của bạn"
+            required>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password"
+            id="password"
+            name="password"
+            required>
+
+        <label for="confirm-password">Nhập lại mật khẩu:</label>
+        <input type="password"
+            id="confirm-password"
+            name="confirm_password"
+            required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel"
+            id="phone"
+            name="phone"
+            value="0901234567">
+
+        <label for="city">Thành phố:</label>
+        <select id="city" name="city">
+            <option>Hà Nội</option>
+            <option>TP.HCM</option>
+        </select>
+
+        <input type="checkbox"
+            id="terms"
+            name="terms"
+            required>
+
+        <label for="terms">
+            Tôi đồng ý điều khoản
+        </label>
+
+        <input type="submit" value="Gửi">
+
+    </form>
