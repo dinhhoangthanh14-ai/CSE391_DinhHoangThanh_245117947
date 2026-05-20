@@ -126,3 +126,102 @@ Câu A4:
     Vì:Rule C có ID selector nên mạnh nhất
 3. Nếu thêm inline style có màu:orange
 4. Nếu Rule A thêm !important có màu:black
+Câu B2
+# BÀI B2 — BOX MODEL LAB
+
+# PHẦN 1 — CONTENT-BOX VS BORDER-BOX
+
+## Hộp 1 — content-box
+
+Khai báo:
+- width: 300px
+- padding: 20px
+- border: 5px
+
+Công thức chiều rộng thực tế:
+
+300 + 20*2 + 5*2 = 350px
+
+### Kết quả đo từ DevTools:
+350px
+
+---
+
+## Hộp 2 — border-box
+
+Khai báo:
+- width: 300px
+- padding: 20px
+- border: 5px
+- box-sizing: border-box
+
+### Kết quả đo từ DevTools:
+300px
+
+---
+
+## Giải thích sự khác biệt
+
+### content-box
+Width chỉ tính phần content.
+
+Padding và border được cộng thêm ra ngoài nên kích thước thật lớn hơn.
+
+---
+
+### border-box
+Width bao gồm:
+- content
+- padding
+- border
+
+=> tổng chiều rộng luôn giữ nguyên 300px.
+
+---
+
+# PHẦN 2 — LAYOUT 3 CỘT
+
+## Trường hợp KHÔNG dùng border-box
+
+Tính toán:
+
+Sidebar:
+250 + 15*2 = 280px
+
+Content:
+500 + 20*2 = 540px
+
+Ads:
+250 + 15*2 = 280px
+
+Tổng:
+280 + 540 + 280 = 1100px
+
+=> vượt quá container 1000px.
+
+---
+
+## Trường hợp CÓ dùng border-box
+
+Padding nằm bên trong width.
+
+Sidebar = 250px
+Content = 500px
+Ads = 250px
+
+Tổng:
+250 + 500 + 250 = 1000px
+
+=> layout khớp chính xác container.
+
+---
+
+# Screenshots cần chụp
+
+## Phần 1
+- screenshots/content-box-devtools.png
+- screenshots/border-box-devtools.png
+
+## Phần 2
+- screenshots/layout-no-borderbox.png
+- screenshots/layout-borderbox.png
