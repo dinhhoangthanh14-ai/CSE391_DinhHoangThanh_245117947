@@ -1,0 +1,76 @@
+
+Câu B2:
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* =========================
+   PHẦN 1
+========================= */
+
+.box-demo {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    background: #f2f2f2;
+}
+
+.content-box {
+    box-sizing: content-box;
+    background: #ffd6d6;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background: #d6ffd9;
+}
+
+/* =========================
+   PHẦN 2
+========================= */
+
+.layout {
+    width: 1000px;
+    display: flex;
+    margin-bottom: 50px;
+    border: 3px solid black;
+}
+
+/* KHÔNG dùng border-box */
+
+.layout-normal .sidebar,
+.layout-normal .ads {
+    width: 250px;
+    padding: 15px;
+    background: #ddd;
+}
+
+.layout-normal .content {
+    width: 500px;
+    padding: 20px;
+    background: #fff3b0;
+}
+
+/* CÓ dùng border-box */
+
+.layout-borderbox .sidebar,
+.layout-borderbox .ads {
+    width: 250px;
+    padding: 15px;
+    background: #cfe8ff;
+    box-sizing: border-box;
+}
+
+.layout-borderbox .content {
+    width: 500px;
+    padding: 20px;
+    background: #d4ffd4;
+    box-sizing: border-box;
+}
