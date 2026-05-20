@@ -1,0 +1,83 @@
+
+
+Câu B2:
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lab</title>
+
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+
+<body>
+
+    <h1>PHẦN 1 — CONTENT-BOX VS BORDER-BOX</h1>
+
+    <section class="box-demo">
+
+        <div class="box content-box">
+            <h2>Content Box</h2>
+            <p>
+                width: 300px<br>
+                padding: 20px<br>
+                border: 5px
+            </p>
+        </div>
+
+        <div class="box border-box">
+            <h2>Border Box</h2>
+            <p>
+                width: 300px<br>
+                padding: 20px<br>
+                border: 5px
+            </p>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <h1>PHẦN 2 — LAYOUT 3 CỘT</h1>
+
+    <h2>Trường hợp KHÔNG dùng border-box</h2>
+
+    <section class="layout layout-normal">
+
+        <aside class="sidebar">
+            Sidebar
+        </aside>
+
+        <main class="content">
+            Nội dung chính
+        </main>
+
+        <aside class="ads">
+            Quảng cáo
+        </aside>
+
+    </section>
+
+    <h2>Trường hợp CÓ dùng border-box</h2>
+
+    <section class="layout layout-borderbox">
+
+        <aside class="sidebar">
+            Sidebar
+        </aside>
+
+        <main class="content">
+            Nội dung chính
+        </main>
+
+        <aside class="ads">
+            Quảng cáo
+        </aside>
+
+    </section>
+
+</body>
+
+</html>
