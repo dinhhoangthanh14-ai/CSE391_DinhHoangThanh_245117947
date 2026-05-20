@@ -75,4 +75,37 @@ Câu A4:
     +Khó bảo trì và chỉnh sửa
     +Không responsive (khó hiển thị trên mobile)
     +Hiệu năng kém
+
+Câu B3
+Lỗi 1: Dòng 1 — Khai báo DOCTYPE sai cú pháp (`<!DOCTYPE>`) — Sửa thành `<!DOCTYPE html>`.
+
+Lỗi 2: Dòng 5 — Thẻ `<title>` chưa đóng — Sửa thành `<title>Trang web</title>`.
+
+Lỗi 3: Dòng 6 — Charset viết sai (`utf8`) — Sửa thành `UTF-8`.
+
+Lỗi 4: Dòng 10 — Thẻ `<h1>` đóng sai (`<h1>` thay vì `</h1>`) — Thay bằng `</h1>`.
+
+Lỗi 5: Dòng 14 — Thẻ `<a>` đầu tiên chưa đóng — Sửa thành `</a>`.
+
+Lỗi 6: Dòng 21 — Thuộc tính src của ảnh không có dấu ngoặc kép — Sửa thành `src="iphone.jpg"`.
+
+Lỗi 7: Dòng 21 — Thẻ `<img>` thiếu thuộc tính `alt` — Thêm `alt="iPhone 16 Pro"`.
+
+Lỗi 8: Dòng 23 — Thẻ `<b>` và `<p>` lồng sai thứ tự — Đổi thành `<p>Giá: <b>25.990.000đ</b></p>`.
+
+Lỗi 9: Dòng 18 và 27 — Dùng `<h3>` không hợp semantic vì chưa có `<h2>` trước đó — Đổi thành `<h2>`.
+
+Lỗi 10: Dòng 41 — Sử dụng thêm một thẻ `<main>` thứ hai là sai semantic HTML — Đổi thành `<aside>`.
+
+Lỗi 11: Dòng 46 — Thẻ `<p>` trong footer chưa đóng — Thêm `</p>`.
+
+Lỗi 12: Bảng thiếu semantic structure — Thêm `<thead>` và `<tbody>`.
+
+Lỗi 13: Dòng 31 và 32 — Dùng `<td>` cho tiêu đề bảng chưa đúng semantic — Đổi thành `<th>`.
+
+Lỗi 14: Thẻ `<html>` thiếu thuộc tính ngôn ngữ — Thêm `lang="vi"`.
+
+Lỗi 15: Thiếu thẻ meta viewport để responsive — Thêm:
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
     
