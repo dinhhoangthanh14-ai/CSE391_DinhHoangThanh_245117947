@@ -42,4 +42,40 @@ Câu A3:
     +<label> là semantic HTML chuẩn
     +dễ bảo trì hơn
     +được trình duyệt và screen reader hỗ trợ tự nhiên
+Câu A4:
+1. loading="lazy" cải thiện:
+    +Tăng tốc độ tải trang
+    +Tiết kiệm băng thông
+    +Cải thiện hiệu năng và SEO
+    -KHÔNG nên dùng loading="lazy"khi:
+    +ảnh logo
+    +banner đầu trang
+    +ảnh hero quan trọng
+2. nên cung cấp nhiều <source> trong <video> vì:
+    Mỗi trình duyệt hỗ trợ codec/video format khác nhau.
+    Cung cấp nhiều <source> giúp:
+    +tăng khả năng tương thích
+    +video chạy được trên nhiều trình duyệt và thiết bị
+    Trình duyệt sẽ tự chọn format mà nó hỗ trợ.
+    -3format video web phổ biến
+    +MP4
+    +WebM
+    +OGG/OGV
+3. Thuộc tính alt trên <img> dùng để:
+lt cung cấp mô tả văn bản cho ảnh.
+Nó được dùng khi:
++ảnh lỗi không tải được
++người dùng sử dụng screen reader
++hỗ trợ SEO
 
++Ảnh sản phẩm iPhone 16
+<img src="iphone16.jpg"
+     alt="iPhone 16 Pro Max màu titan đen mặt trước và mặt sau">
+
++Ảnh trang trí (decorative)
+<img src="decor-line.png" alt="">
+
++Ảnh biểu đồ doanh thu Q1/2026
+<img src="chart-q1.png"
+     alt="Biểu đồ doanh thu quý 1 năm 2026 tăng từ tháng 1 đến tháng 3">
+     
