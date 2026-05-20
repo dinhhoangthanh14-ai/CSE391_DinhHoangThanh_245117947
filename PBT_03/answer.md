@@ -225,3 +225,9 @@ Tổng:
 ## Phần 2
 - screenshots/layout-no-borderbox.png
 - screenshots/layout-borderbox.png
+Câu B3 — SPECIFICITY BATTLE
+ Element được test
+html
+<p id="demo" class="text highlight">
+    Hello World
+</p>
