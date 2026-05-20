@@ -112,3 +112,17 @@ Câu A3:
     Browser chỉ lấy margin lớn hơn:
                             max(25,40)=40px
     → Khoảng cách giữa box-a và box-b = 40px
+Câu A4:
+1. Tính specificity score cho từng rule
+    +Rule A
+    Specificity:(0, 0, 1)
+    +Rule B
+    Specificity:(0, 1, 0)
+    +Rule C
+    Specificity:(1, 0, 0)
+    +Rule D
+    Specificity:(0, 1, 1)
+2. Element sẽ có màu:Đỏ
+    Vì:Rule C có ID selector nên mạnh nhất
+3. Nếu thêm inline style có màu:orange
+4. Nếu Rule A thêm !important có màu:black
