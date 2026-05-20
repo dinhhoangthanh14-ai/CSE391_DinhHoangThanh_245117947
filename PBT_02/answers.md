@@ -20,3 +20,26 @@ Câu A1:
     8.type="radio" → Các nút tròn, chỉ chọn một trong nhiều lựa chọn → Validation khi dùng required → Dùng để chọn phương thức thanh toán (COD, Visa, Momo...).
 
     9.type="search" → Ô tìm kiếm có giao diện giống thanh search → Không validation đặc biệt → Dùng cho thanh tìm kiếm sản phẩm trên website thương mại điện tử.
+Câu A3:
+1. <label for="email"> quan trọng cho người dùng screen reader vì:
+    Thẻ <label> giúp liên kết mô tả với ô nhập liệu (input)
+    Khi dùng:
+    <label for="email">Email</label>
+    <input type="email" id="email">
+    screen reader sẽ đọc: Email, edit text
+    để người khiếm thị biết ô đó dùng để nhập gì.
+    Nếu không có <label>, screen reader có thể chỉ đọc:edit text
+    người dùng sẽ không biết cần nhập email, mật khẩu hay thông tin nào khác
+    Ngoài accessibility, <label> còn giúp UX tốt hơn vì khi click vào chữ “Email” thì con trỏ sẽ tự focus vào ô input.
+2. Khi nào dùng <fieldset> + <legend>:
+    Dùng khi cần nhóm các input có liên quan với nhau trong form.
+    +<fieldset>: nhóm các trường dữ liệu
+    +<legend>: tiêu đề của nhóm đó
+3. aria-label dùng khi nào:
+    +aria-label dùng khi phần tử không có text hiển thị nhưng vẫn cần mô tả cho screen reader
+4. Không nên dùng aria-label khi đã có <label> vì:
+    -Nếu đã có <label> thì không cần aria-label nữa vì:
+    +<label> là semantic HTML chuẩn
+    +dễ bảo trì hơn
+    +được trình duyệt và screen reader hỗ trợ tự nhiên
+
