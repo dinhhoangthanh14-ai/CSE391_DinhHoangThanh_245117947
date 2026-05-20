@@ -64,3 +64,51 @@ Bài A2
                                         Mô tả sản phẩm...
 7. a[href="/"]                  → Chọn: Home
 8. .top-bar.dark h1             → Chọn: ShopTLU
+Câu A3:
+1.Trường hợp 1
+    Công thức chiều rộng hiển thị:
+
+                        total width=content+padding+border
+
+    Padding trái + phải:
+
+                        20+20=40px
+
+    Border trái + phải:
+
+                        5+5=10px
+
+    Chiều rộng hiển thị:
+
+                        400+40+10=450px
+    → Chiều rộng hiển thị = 450px
+
+    Không gian chiếm trên trang = width hiển thị + margin trái phải
+
+    Margin:
+            10+10=20px
+            450+20=470px
+    → Không gian chiếm trên trang = 470px
+2.Trường hợp 2:
+    Kích thước content thực tế:
+                                400−padding−border
+
+    Padding:
+                                20+20=40
+
+    Border:
+                                5+5=10
+                                400−40−10=350px
+    → Kích thước content thực tế = 350px
+
+    Không gian chiếm trên trang: 
+                                400+10+10=420px
+    → Không gian chiếm trên trang = 420px
+3.Trường hợp 3:
+    Thông thường dễ nghĩ:
+                            25+40=65px
+    Nhưng thực tế CSS xảy ra margin collapse
+
+    Browser chỉ lấy margin lớn hơn:
+                            max(25,40)=40px
+    → Khoảng cách giữa box-a và box-b = 40px
