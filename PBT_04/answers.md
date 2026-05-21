@@ -168,3 +168,190 @@ Flexbox phù hợp với direction column.
 Dùng:
 display: flex;
 flex-direction: column;margin-top: auto;để nút luôn dính đáy card.
+
+Câu C2:
+
+1. Lỗi 1
+    Cards không đều chiều cao
+    Nút "Mua" bị nhảy lên/xuống
+
+    CODE BỊ LỖI
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 30%;
+        margin: 1.5%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card .btn {
+        padding: 10px;
+    }
+    NGUYÊN NHÂN
+
+    Các card có lượng text khác nhau
+    => chiều cao card khác nhau
+
+    Nút .btn nằm ngay sau nội dung
+    => card dài thì nút xuống thấp
+    => card ngắn thì nút nằm cao hơn
+
+    Kết quả:
+    các nút không thẳng hàng
+
+    CÁCH SỬA
+
+
+    Cho card dùng Flexbox theo chiều dọc:
+
+    - display: flex
+    - flex-direction: column
+
+    Và cho nút:
+    margin-top: auto;
+
+    => nút luôn bị đẩy xuống đáy card
+
+
+    CODE SỬA
+
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        width: 30%;
+
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid #ccc;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card .btn {
+        padding: 10px;
+
+        margin-top: auto;
+    }
+
+
+2. LỖI 2
+    Item không nằm giữa màn hình
+    CODE BỊ LỖI
+
+    .hero {
+        height: 100vh;
+        display: flex;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    NGUYÊN NHÂN
+
+    display: flex chỉ bật Flexbox
+    nhưng chưa căn giữa
+
+    Mặc định:
+    - justify-content: flex-start
+    - align-items: stretch
+
+    => item vẫn nằm góc trái trên
+
+    CÁCH SỬA
+
+    Dùng:
+    - justify-content: center
+    - align-items: center
+
+    => căn giữa ngang + dọc
+
+    CODE SỬA
+    .hero {
+        height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+2. LỖI 3
+    Sidebar bị co lại khi content quá dài
+
+    CODE BỊ LỖI
+
+    .layout {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    NGUYÊN NHÂN
+
+    Trong Flexbox:
+
+    flex-shrink mặc định = 1
+
+    => sidebar được phép co lại
+    khi content quá dài
+
+    Nên:
+    sidebar nhỏ hơn 250px
+
+    CÁCH SỬA
+
+
+    Tắt co sidebar bằng:
+
+    flex-shrink: 0;
+
+    CODE SỬA
+
+    .layout {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 250px;
+
+        flex-shrink: 0;
+    }
+
+    .content {
+        flex: 1;
+    }
