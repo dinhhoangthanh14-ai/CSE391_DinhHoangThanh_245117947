@@ -1,0 +1,171 @@
+
+Câu B2
+/* animations.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.spinner {
+    width: 70px;
+    height: 70px;
+
+    border: 8px solid #ddd;
+    border-top: 8px solid blue;
+
+    border-radius: 50%;
+
+    margin: 0 auto 50px;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.products {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+.card {
+    width: 300px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease;
+
+    animation: fadeIn 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   IMAGE ZOOM
+========================= */
+
+.image-box {
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.card-content button {
+    padding: 12px 20px;
+
+    border: none;
+
+    background: blue;
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.card-content button:hover {
+    background: orange;
+    color: black;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   FADE IN ANIMATION
+========================= */
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
