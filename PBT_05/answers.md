@@ -176,3 +176,91 @@ Câu A3:
     1400px
     → width: 1140px
 
+Câu A4:
+    1. Variables
+
+    Dùng biến để lưu giá trị dùng nhiều lần.
+
+    Ví dụ:
+
+    $primary-color: blue;
+
+    button {
+        background: $primary-color;
+    }
+
+
+2. Nesting
+    Cho phép viết CSS lồng nhau giống cấu trúc HTML.
+
+    Ví dụ:
+
+    .navbar {
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            color: white;
+        }
+
+    }
+
+
+3. Mixins
+    Tạo đoạn CSS tái sử dụng.
+
+    @mixin:
+    khai báo
+    @include:
+    gọi lại
+
+    Ví dụ:
+
+    @mixin center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        @include center;
+    }
+
+
+4. @extend / Inheritance
+
+    Cho class kế thừa CSS của class khác.
+
+    Ví dụ:
+
+    .button {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .primary-btn {
+        @extend .button;
+        background: blue;
+    }
+
+
+    Trình duyệt không đọc được file .scss
+    vì SCSS không phải CSS chuẩn.
+
+    SCSS cần được compile/transpile
+    thành file .css trước.
+
+    Ví dụ:
+
+    style.scss
+    ↓
+    compile
+    ↓
+    style.css
+
+Có thể dùng:
+- Sass CLI
+- VS Code Live Sass Compiler
+- Webpack/Vite
