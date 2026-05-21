@@ -231,3 +231,128 @@ html
 <p id="demo" class="text highlight">
     Hello World
 </p>
+Câu C2
+1. “Sản phẩm A” (h2)
+HTML:
+<h2 class="title highlight">Sản phẩm A</h2>
+
+Các rule liên quan:
+
+body { font-size: 16px; }
+.container { font-size: 14px; }
+.card .title { font-size: 20px; }
+
+- body cho font-size mặc định = 16px
+- .container ghi đè = 14px
+- h2 có class title nên match:
+  .card .title { font-size: 20px; }
+
+Rule này áp dụng trực tiếp lên h2
+=> không cần inherit nữa
+
+Kết quả:
+font-size = 20px
+
+COLOR:
+
+Các rule liên quan:
+
+body { color: #333; }
+.card { color: blue; }
+#featured .title { color: red; }
+.highlight { color: green !important; }
+
+- body cho color mặc định = #333
+- .card cho color = blue
+- #featured .title cho color = red
+- .highlight cho color = green !important
+
+h2 có:
+class="title highlight"và nằm trong:
+id="featured"
+
+=> h2 match cả:
+- #featured .title
+- .highlight
+
+Nhưng:
+.highlight có !important
+=> thắng toàn bộ rule thường
+
+Kết quả:
+color = green
+
+2. “Mô tả sản phẩm” (p trong featured card)
+HTML:
+<p>Mô tả sản phẩm</p>
+
+Rule liên quan:
+
+.card { color: blue; }
+.card p { color: inherit; }
+
+- .card có color = blue
+- p dùng:
+  color: inherit
+
+inherit nghĩa là:
+lấy đúng màu của phần tử cha
+
+Cha của p là .card
+=> màu của cha = blue
+
+Kết quả:
+color = blue
+
+3. “Sản phẩm B” (h2)
+
+HTML:
+<h2 class="title">Sản phẩm B</h2>
+
+FONT-SIZE
+Match rule:
+.card .title { font-size: 20px; }
+=> áp dụng trực tiếp
+
+Kết quả:
+font-size = 20px
+
+COLOR
+
+h2 này:
+- không có class highlight
+- không nằm trong #featured
+
+Nên không match:
+- #featured .title
+- .highlight
+Nó sẽ inherit từ .card
+.card { color: blue; }
+
+Kết quả:
+color = blue
+
+4. “Mô tả sản phẩm B” (p.highlight)
+
+HTML:
+<p class="highlight">Mô tả sản phẩm B</p>
+
+Rule liên quan:
+
+.card { color: blue; }
+.card p { color: inherit; }
+.highlight { color: green !important; }
+
+- .card cho color = blue
+- .card p => inherit màu blue từ cha
+- nhưng p có class highlight
+
+=> match:
+.highlight { color: green !important; }
+
+Do có !important
+=> thắng màu blue
+
+Kết quả:
+color = green
+
