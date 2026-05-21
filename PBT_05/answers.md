@@ -1,0 +1,130 @@
+
+Câu A1:
+
+1. THẺ META VIEWPORT CHUẨN
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    +GIẢI THÍCH:
+    name="viewport"
+    => khai báo cho trình duyệt biết:
+    thiết lập viewport cho thiết bị di động
+    width=device-width
+    => chiều rộng viewport
+    bằng đúng chiều rộng màn hình thiết bị
+
+    Ví dụ:
+    - iPhone thật rộng 390px
+    - viewport cũng = 390px
+    initial-scale=1.0
+    => mức zoom ban đầu = 100%
+    Trang web hiển thị đúng kích thước thật
+    không tự zoom in/out
+
+2. NẾU THIẾU META VIEWPORT
+
+    iPhone/Safari sẽ giả lập trang web
+    giống màn hình desktop khoảng 980px
+
+    Kết quả:
+    - website bị thu nhỏ
+    - chữ rất nhỏ
+    - phải zoom tay
+    - responsive hoạt động sai
+    - media query mobile có thể không đúng
+
+Ví dụ:
+Layout desktop vẫn xuất hiện trên điện thoại.
+
+3. MOBILE-FIRST vs DESKTOP-FIRST
+
+    MOBILE-FIRST
+    Viết CSS cho mobile trước
+    sau đó dùng:
+    @media (min-width: ...)
+    để mở rộng cho tablet/desktop
+
+    VÍ DỤ MOBILE-FIRST
+
+
+    .card {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+
+        .card {
+            width: 50%;
+        }
+
+    }
+
+
+    +Ý NGHĨA:
+
+    - Mobile:
+    card = 100%
+    - Từ 768px trở lên:
+    card = 50%
+
+    DESKTOP-FIRST
+
+    Viết CSS cho desktop trước
+    sau đó dùng:
+
+    @media (max-width: ...)
+
+    để thu nhỏ cho mobile
+
+    VÍ DỤ DESKTOP-FIRST
+
+    .card {
+        width: 50%;
+    }
+
+    @media (max-width: 768px) {
+
+        .card {
+            width: 100%;
+        }
+
+    }
+
+    Ý NGHĨA
+
+    - Desktop:
+    card = 50%
+
+    - Nhỏ hơn 768px:
+    card = 100%
+
+4. TẠI SAO MOBILE-FIRST ĐƯỢC KHUYÊN DÙNG?
+
+    +Lý do 1
+
+    Hiện nay đa số người dùng dùng điện thoại
+
+    => ưu tiên mobile trước
+
+    +Lý do 2
+
+    CSS gọn và dễ mở rộng hơn
+
+    Mobile trước:
+    - đơn giản trước
+    - thêm tính năng sau
+
+    +Lý do 3
+
+    Tối ưu performance
+    Thiết bị mobile yếu hơn desktop
+    => nên tải layout nhẹ trước
+
+    +Lý do 4
+
+    Responsive dễ quản lý hơn
+
+    Dùng:
+    @media (min-width)
+
+    thường dễ đọc và dễ maintain hơn
