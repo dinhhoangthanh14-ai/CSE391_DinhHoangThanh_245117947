@@ -158,3 +158,21 @@ xxl:
 - ≥ 1400px
 - Màn hình rất lớn
 - Grid sản phẩm: 5–6 cột
+
+Câu A3:
+
+    375px (iPhone SE)
+    → width: 100%
+
+    600px
+    → width: 540px
+
+    800px
+    → width: 720px
+
+    1000px
+    → width: 960px
+
+    1400px
+    → width: 1140px
+
