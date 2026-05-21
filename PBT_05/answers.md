@@ -128,3 +128,33 @@ Layout desktop vẫn xuất hiện trên điện thoại.
     @media (min-width)
 
     thường dễ đọc và dễ maintain hơn
+Câu A2:
+xs:
+- < 576px
+- Điện thoại nhỏ
+- Grid sản phẩm: 1 cột
+
+sm:
+- ≥ 576px
+- Điện thoại lớn
+- Grid sản phẩm: 2 cột
+
+md:
+- ≥ 768px
+- Tablet
+- Grid sản phẩm: 2–3 cột
+
+lg:
+- ≥ 992px
+- Laptop/Desktop nhỏ
+- Grid sản phẩm: 3–4 cột
+
+xl:
+- ≥ 1200px
+- Desktop lớn
+- Grid sản phẩm: 4 cột
+
+xxl:
+- ≥ 1400px
+- Màn hình rất lớn
+- Grid sản phẩm: 5–6 cột
