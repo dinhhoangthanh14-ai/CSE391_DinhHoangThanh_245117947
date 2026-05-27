@@ -1,0 +1,103 @@
+
+Bài B3
+body {
+    font-family: $font-primary;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+}
+
+.header {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: $spacing-md;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: $spacing-md;
+
+            li {
+                a {
+                    color: $white-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.products {
+    padding: $spacing-lg;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-lg;
+
+    @include respond-to(tablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: $white-color;
+    border-radius: $radius-md;
+    overflow: hidden;
+    transition: 0.3s;
+    @include card-shadow;
+
+    .card-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: $spacing-md;
+    }
+
+    .card-title {
+        font-size: 22px;
+        margin-bottom: $spacing-sm;
+        color: $primary-color;
+    }
+
+    .card-text {
+        line-height: 1.6;
+    }
+
+    .card-button {
+        margin-top: $spacing-md;
+        padding: $spacing-sm $spacing-md;
+        border: none;
+        background-color: $primary-color;
+        color: $white-color;
+        cursor: pointer;
+        border-radius: $radius-md;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &.featured {
+        border: 3px solid $secondary-color;
+    }
+}
+
+.footer {
+    @include flex-center;
+    background-color: $primary-color;
+    color: $white-color;
+    padding: $spacing-md;
+    margin-top: $spacing-lg;
+}
