@@ -1,0 +1,27 @@
+
+Bài B3
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin respond-to($breakpoint) {
+
+    @if $breakpoint == tablet {
+        @media (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop {
+        @media (max-width: $breakpoint-desktop) {
+            @content;
+        }
+    }
+}

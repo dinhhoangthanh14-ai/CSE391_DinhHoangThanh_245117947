@@ -192,7 +192,7 @@ Câu B3
     ```html
     action="/search"
 Câu C2
-    Semantic HTML không chỉ là “học thêm vài thẻ mới”, mà còn giúp website hoạt động tốt hơn về mặt kỹ thuật. Nếu dùng <div> cho mọi thứ thì trình duyệt, công cụ tìm kiếm và các thiết bị hỗ trợ người khuyết tật sẽ khó hiểu cấu trúc thực sự của trang web.
+    Semantic HTML không chỉ là “học thêm vài thẻ mới”, mà còn giúp website hoạt động tốt hơn về mặt kỹ thuật. Nếu dùng <div> cho mọi thứ thì trình duyệt, công cụ tìm kiếm và các thiết bị hỗ trợ người khuyết tật sẽ khó hiểu cấu trúc thực sự của trang web. 
 
     Lý do đầu tiên là SEO. Các công cụ tìm kiếm như Google ưu tiên những trang có cấu trúc rõ ràng. Khi sử dụng các thẻ như <header>, <nav>, <main>, <article> hay <footer>, bot tìm kiếm sẽ dễ xác định đâu là nội dung chính, đâu là menu điều hướng hoặc bài viết. Điều này giúp website được index chính xác hơn và cải thiện thứ hạng tìm kiếm. Nếu tất cả đều là <div>, bot phải đoán cấu trúc thông qua class hoặc CSS, kém hiệu quả hơn.
 

@@ -1,0 +1,50 @@
+
+Câu A2:
+Trường hợp 1:
+    <input type="text" required value="">
+    User để trống
+    ->Form không submit được.
+    Vì :
+    Thuộc tính required bắt buộc người dùng phải nhập dữ liệu.
+    Để trống → vi phạm validation.
+Trường hợp 2:
+    <input type="email" value="abc">
+    User nhập "abc"
+    ->Form không submit được.
+    Vì :
+    type="email" yêu cầu dữ liệu đúng định dạng email.
+    abc không có:
+    ký tự @
+    domain hợp lệ
+    → sai định dạng
+Trường hợp 3:
+    <input type="number" min="1" max="10" value="15">
+    User nhập 15
+    ->Form không submit được.
+    Vì :
+    Input chỉ cho phép giá trị:
+    1≤value≤10 Nhưng :15>10
+    → vượt quá max.
+Trường hợp 4:
+    <input type="text" pattern="[0-9]{10}" value="abc123">
+    User nhập abc123
+    Vì:
+    chỉ chứa số
+    đúng 10 chữ số
+    abc123:
+    có chữ cái
+    không đủ 10 số
+    → không khớp regex.Form không submit được.
+Trường hợp 5
+    <input type="password" minlength="8" value="123">
+    User nhập 123
+    ->Form không submit được.
+    Vì :
+    minlength="8"
+    Mật khẩu phải có ít nhất:
+    8 ky tự
+    Nhưng "123" chỉ có:
+    3 ky tự
+    → không hợp lệ.
+Câu 3:
+1.
