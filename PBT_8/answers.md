@@ -86,3 +86,22 @@ Câu A3
 8. Đảo ngược mảng (không mutate gốc)
     const reversedNums = [...nums].reverse();
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+Câu A4
+1. console.log(name, price, ram, color);
+    // iPhone 16 25990000 8 Titan
+
+2. console.log(specs);
+    // ReferenceError: specs is not defined
+
+3. console.log(updated.price);
+    // 23990000
+
+4. console.log(updated.sale);
+    // true
+
+5. console.log(product.price);
+    // 25990000
+
+5. console.log(product.specs.ram);
+    // 16
