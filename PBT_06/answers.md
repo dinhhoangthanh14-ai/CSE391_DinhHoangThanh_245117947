@@ -54,3 +54,24 @@ Câu A3:
     + Không ép kiểu ngầm → kết quả dễ dự đoán.
     + Tránh các lỗi khó phát hiện do JavaScript tự chuyển đổi kiểu dữ liệu.
     + Là quy tắc được khuyến nghị trong các dự án JavaScript hiện đại.
+Câu A4:
+1. Tất cả giá trị Falsy trong JavaScript
+    Có 8 giá trị Falsy:
+
+    false
+    0
+    -0
+    0n
+    ""
+    null
+    undefined
+    NaN
+2. Dự đoán kết quả
+    if ("0") console.log("A");    // In A
+    if ("") console.log("B");     // Không in
+    if ([]) console.log("C");     // In C
+    if ({}) console.log("D");     // In D
+    if (null) console.log("E");   // Không in
+    if (0) console.log("F");      // Không in
+    if (-1) console.log("G");     // In G
+    if (" ") console.log("H");    // In H
