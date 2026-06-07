@@ -39,3 +39,18 @@ Câu A2:
                             "5" - 3
                             → 5 - 3
                             → 2
+Câu A3:
+1. Dự đoán kết quả
+    console.log(5 == "5");                // true
+    console.log(5 === "5");               // false
+    console.log(null == undefined);       // true
+    console.log(null === undefined);      // false
+    console.log(NaN == NaN);              // false
+    console.log(0 == false);              // true
+    console.log(0 === false);             // false
+    console.log("" == false);             // true
+2. Nên dùng === trong hầu hết các trường hợp.
+- Vì:
+    + Không ép kiểu ngầm → kết quả dễ dự đoán.
+    + Tránh các lỗi khó phát hiện do JavaScript tự chuyển đổi kiểu dữ liệu.
+    + Là quy tắc được khuyến nghị trong các dự án JavaScript hiện đại.
