@@ -91,3 +91,51 @@ Câu A5:
         <span>Giá: ${price}đ</span>
     </div>
     `;
+
+Câu C1
+1. Các lỗi trong hàm tinhGiaGiamGia
+    Lỗi 1: Sai so sánh (dùng = thay vì ===)
+    if (giaSauGiam = 0)
+    Vấn đề:
+    = là gán giá trị, không phải so sánh
+    luôn làm giaSauGiam = 0 → điều kiện luôn sai logic
+    Sửa:
+    if (giaSauGiam === 0)
+    Lỗi 2: Thiếu xử lý kiểu dữ liệu giaBan là string
+    const gia = tinhGiaGiamGia("100000", 20)
+    Vấn đề:
+    "100000" là string → phép toán có thể gây ép kiểu ngầm
+    dễ bug nếu input không chuẩn
+    Sửa:
+    giaBan = Number(giaBan);
+    Lỗi 3: Không xử lý trường hợp giá âm / NaN
+    Vấn đề:
+    nếu nhập sai → kết quả sai
+    Sửa:
+    if (isNaN(giaBan) || giaBan < 0) return "Giá không hợp lệ";
+    Lỗi 4: Thiếu dấu ; (không bắt buộc nhưng chuẩn code)
+    return "Phần trăm giảm không hợp lệ"
+2. Lỗi trong test case
+    Lỗi 5: nhập sai logic phần trăm
+    tinhGiaGiamGia(50000, 110)
+    OK về code, nhưng:
+    cần bị chặn đúng (đã có check > 100)
+3. Lỗi “ẩn” quan trọng nhất (var + setTimeout)
+    Lỗi 6: var i trong vòng lặp async
+    for (var i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log("Item " + i)
+        }, 1000)
+    }
+    ❌ Vấn đề:
+    var có scope là function
+    tất cả callback dùng chung 1 biến i
+    khi chạy sau 1s → i = 5 hết
+
+    Output sai:
+
+    Item 5
+    Item 5
+    Item 5
+    Item 5
+    Item 5
