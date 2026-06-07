@@ -38,3 +38,16 @@ Câu A1
     };
 
     console.log(tinhThueBaoHiem3(15000000));
+
+Bài A2
+1. Dự đoán output đoạn 1:1 2 3 2 2
+2. Dự đoán output đoạn 2:
+    var: 3
+    var: 3
+    var: 3
+    let: 0
+    let: 1
+    let: 2
+3. Vì:
+    +var tạo một biến dùng chung cho tất cả các lần lặp nên các callback đều nhận giá trị cuối cùng.
+    +let tạo một biến mới cho mỗi lần lặp nên mỗi callback nhớ đúng giá trị tại thời điểm được tạo.
