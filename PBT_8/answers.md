@@ -105,3 +105,16 @@ Câu A4
 
 5. console.log(product.specs.ram);
     // 16
+
+Câu C1
+    const processOrders = (orders) =>
+        orders
+            .filter(({ status, total }) => status === "completed" && total > 100000)
+            .map(({ id, customer, total }) => ({
+                id,
+                customer,
+                total,
+                discount: total * 0.1,
+                finalTotal: total * 0.9
+            }))
+            .sort((a, b) => b.finalTotal - a.finalTotal);
