@@ -75,3 +75,19 @@ Câu A4:
     if (0) console.log("F");      // Không in
     if (-1) console.log("G");     // In G
     if (" ") console.log("H");    // In H
+
+Câu A5:
+1. Cách 1
+    var greeting = `Xin chào ${name}! Bạn ${age} tuổi.`;
+
+2. Cách 2
+    var url = `https://api.example.com/users/${userId}/orders?page=${page}`;
+
+3. Cách 3
+    var html = `
+    <div class="card">
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <span>Giá: ${price}đ</span>
+    </div>
+    `;
