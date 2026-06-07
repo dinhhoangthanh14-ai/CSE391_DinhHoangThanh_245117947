@@ -51,3 +51,38 @@ Bài A2
 3. Vì:
     +var tạo một biến dùng chung cho tất cả các lần lặp nên các callback đều nhận giá trị cuối cùng.
     +let tạo một biến mới cho mỗi lần lặp nên mỗi callback nhớ đúng giá trị tại thời điểm được tạo.
+Câu A3
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+1. Lấy các số chẵn
+    const evenNums = nums.filter(n => n % 2 === 0);
+    [2, 4, 6, 8, 10]
+
+2. Nhân mỗi số với 3
+    const tripleNums = nums.map(n => n * 3);
+    [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+
+3. Tính tổng tất cả
+    const total = nums.reduce((sum, n) => sum + n, 0);
+    55
+
+4. Tìm số đầu tiên > 7
+    const firstGreaterThan7 = nums.find(n => n > 7);
+    8
+
+5. Kiểm tra CÓ số > 10 không
+    const hasGreaterThan10 = nums.some(n => n > 10);
+    false
+
+6. Kiểm tra TẤT CẢ đều > 0
+    const allGreaterThan0 = nums.every(n => n > 0);
+    true
+
+7. Tạo mảng "Số X là [chẵn/lẻ]"
+    const descriptions = nums.map(
+        n => `Số ${n} là ${n % 2 === 0 ? "chẵn" : "lẻ"}`
+    );
+
+8. Đảo ngược mảng (không mutate gốc)
+    const reversedNums = [...nums].reverse();
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
